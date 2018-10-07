@@ -27,6 +27,17 @@ LOCAL_SRC_FILES_32 := proprietary/lib/libcam.halsensor.so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libcamera_client_mtk
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/lib64/libcamera_client_mtk.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libcamera_client_mtk.so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libcameracustom
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_OWNER = mtk
